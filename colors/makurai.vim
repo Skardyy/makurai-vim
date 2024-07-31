@@ -129,6 +129,7 @@ exe "hi! @type.ts"        .s:fg_tag       .s:bg_none        .s:fmt_none
 exe "hi! @type.builtin"     .s:fg_special   .s:bg_none        .s:fmt_none
 exe "hi! @function"       .s:fg_function  .s:bg_none        .s:fmt_none
 exe "hi! @function.builtin" .s:fg_function  .s:bg_none        .s:fmt_none
+exe "hi! @punctuation"    .s:fg_tag       .s:bg_none        .s:fmt_none
 exe "hi! Structure"       .s:fg_special   .s:bg_none        .s:fmt_none
 
 exe "hi! Special"         .s:fg_special   .s:bg_none        .s:fmt_none
