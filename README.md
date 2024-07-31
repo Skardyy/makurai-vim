@@ -32,4 +32,5 @@ and more...
 
 # Screenshots  
 ![image](https://github.com/user-attachments/assets/7fbc9605-890f-4a42-9a0d-45cef334685e)  
-![image](https://github.com/user-attachments/assets/fc289bbd-99a8-49ba-8fb3-df4fd330a52b)  
+![image](https://github.com/user-attachments/assets/8238c79e-01f3-499e-89d3-030912dc31e8)  
+
