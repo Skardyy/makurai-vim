@@ -122,9 +122,10 @@ exe "hi! PreProc"         .s:fg_special   .s:bg_none        .s:fmt_none
 
 exe "hi! Type"            .s:fg_tag       .s:bg_none        .s:fmt_none
 exe "hi! @lsp.type.namespace" .s:fg_tag   .s:bg_none        .s:fmt_none
-exe "hi! @constant.builtin"   .s:fg_special   .s:bg_none        .s:fmt_none
+exe "hi! @constant.builtin" .s:fg_constant .s:bg_none        .s:fmt_none
 exe "hi! @type"           .s:fg_special   .s:bg_none        .s:fmt_none
 exe "hi! @function"       .s:fg_function  .s:bg_none        .s:fmt_none
+exe "hi! @function.builtin" .s:fg_function  .s:bg_none        .s:fmt_none
 exe "hi! Structure"       .s:fg_special   .s:bg_none        .s:fmt_none
 
 exe "hi! Special"         .s:fg_special   .s:bg_none        .s:fmt_none
