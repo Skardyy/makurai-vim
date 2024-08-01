@@ -106,24 +106,22 @@ call s:hi("Function",        s:fg_function,  s:bg_none,        s:fmt_none)
 call s:hi("Statement",       s:fg_keyword,   s:bg_none,        s:fmt_none)
 call s:hi("Operator",        s:fg_operator,  s:bg_none,        s:fmt_none)
 call s:hi("PreProc",         s:fg_special,   s:bg_none,        s:fmt_none)
-call s:hi("Type",            s:fg_tag,       s:bg_none,        s:fmt_none)
+call s:hi("Type",            s:fg_special,   s:bg_none,        s:fmt_none)
 call s:hi("Special",         s:fg_special,   s:bg_none,        s:fmt_none)
 
 "------------------------------------
 " Language-Specific
 "------------------------------------
 call s:hi("@punctuation",           s:fg_punctuation, s:bg_none,        s:fmt_none)
+call s:hi("@punctuation.special",   s:fg_punctuation, s:bg_none,        s:fmt_none)
 call s:hi("@tag.delimiter",         s:fg_comment,     s:bg_none,        s:fmt_none)
 call s:hi("@tag.attribute",         s:fg_function,    s:bg_none,        s:fmt_none)
 call s:hi("@lsp.type.namespace",    s:fg_tag,         s:bg_none,        s:fmt_none)
 call s:hi("@constant.builtin",      s:fg_constant,    s:bg_none,        s:fmt_none)
 call s:hi("@type",                  s:fg_special,     s:bg_none,        s:fmt_none)
-call s:hi("@variable",              s:fg_fg,          s:bg_none,        s:fmt_none)
-call s:hi("@type.ts",               s:fg_tag,         s:bg_none,        s:fmt_none)
 call s:hi("@type.builtin",          s:fg_special,     s:bg_none,        s:fmt_none)
 call s:hi("@function",              s:fg_function,    s:bg_none,        s:fmt_none)
 call s:hi("@function.builtin",      s:fg_function,    s:bg_none,        s:fmt_none)
-call s:hi("@punctuation.special",   s:fg_punctuation, s:bg_none,        s:fmt_none)
 
 "------------------------------------
 " Diff Syntax Highlighting
