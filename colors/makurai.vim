@@ -6,7 +6,9 @@ endif
 
 let g:colors_name = "makurai"
 
+"------------------------------------
 " Color Palette
+"------------------------------------
 let s:palette = {
     \ 'bg':              "#1e222a",
     \ 'comment':         "#5C6773",
@@ -30,7 +32,9 @@ let s:palette = {
     \ 'punctuation':     "#f8f8f0"
 \ }
 
+"------------------------------------
 " Helper Functions
+"------------------------------------
 function! s:build_prim(hi_elem, field)
     let l:vname = "s:" . a:hi_elem . "_" . a:field
     let l:gui_assign = "gui".a:hi_elem."=".s:palette[a:field]
@@ -45,7 +49,9 @@ for [key_name, d_value] in items(s:palette)
     call s:build_prim('fg', key_name)
 endfor
 
+"------------------------------------
 " Formatting Options
+"------------------------------------
 let s:none   = "NONE"
 let s:t_none = "NONE"
 let s:n      = "NONE"
@@ -74,7 +80,9 @@ function! s:hi(group, fg, bg, fmt)
     exe "hi! " . a:group . a:fg . a:bg . a:fmt
 endfunction
 
+"------------------------------------
 " General UI
+"------------------------------------
 call s:hi("Normal",        s:fg_none,        s:bg_none,        s:fmt_none)
 call s:hi("ColorColumn",   s:fg_none,        s:bg_line,        s:fmt_none)
 call s:hi("CursorColumn",  s:fg_none,        s:bg_line,        s:fmt_none)
@@ -87,55 +95,69 @@ call s:hi("Folded",        s:fg_none,        s:bg_none,        s:fmt_none)
 call s:hi("FoldColumn",    s:fg_none,        s:bg_none,        s:fmt_none)
 call s:hi("SignColumn",    s:fg_none,        s:bg_none,        s:fmt_none)
 
-" Syntax
+"------------------------------------
+" Syntax Highlighting
+"------------------------------------
 call s:hi("Comment",         s:fg_comment,   s:bg_none,        s:fmt_none)
 call s:hi("Constant",        s:fg_constant,  s:bg_none,        s:fmt_none)
 call s:hi("String",          s:fg_string,    s:bg_none,        s:fmt_none)
 call s:hi("Identifier",      s:fg_fg,        s:bg_none,        s:fmt_none)
-call s:hi("Function",        s:fg_function,  s:bg_none,        s:fmt_ital)
-call s:hi("Statement",       s:fg_keyword,   s:bg_none,        s:fmt_ital)
+call s:hi("Function",        s:fg_function,  s:bg_none,        s:fmt_none)
+call s:hi("Statement",       s:fg_keyword,   s:bg_none,        s:fmt_none)
 call s:hi("Operator",        s:fg_operator,  s:bg_none,        s:fmt_none)
 call s:hi("PreProc",         s:fg_special,   s:bg_none,        s:fmt_none)
 call s:hi("Type",            s:fg_tag,       s:bg_none,        s:fmt_none)
 call s:hi("Special",         s:fg_special,   s:bg_none,        s:fmt_none)
 
-" Language Specific
+"------------------------------------
+" Language-Specific
+"------------------------------------
 call s:hi("@punctuation",           s:fg_punctuation, s:bg_none,        s:fmt_none)
 call s:hi("@tag.delimiter",         s:fg_comment,     s:bg_none,        s:fmt_none)
 call s:hi("@tag.attribute",         s:fg_function,    s:bg_none,        s:fmt_none)
 call s:hi("@lsp.type.namespace",    s:fg_tag,         s:bg_none,        s:fmt_none)
 call s:hi("@constant.builtin",      s:fg_constant,    s:bg_none,        s:fmt_none)
 call s:hi("@type",                  s:fg_special,     s:bg_none,        s:fmt_none)
-call s:hi("@type.tsx",              s:fg_tag,         s:bg_none,        s:fmt_none)
+call s:hi("@variable",              s:fg_fg,          s:bg_none,        s:fmt_none)
 call s:hi("@type.ts",               s:fg_tag,         s:bg_none,        s:fmt_none)
 call s:hi("@type.builtin",          s:fg_special,     s:bg_none,        s:fmt_none)
 call s:hi("@function",              s:fg_function,    s:bg_none,        s:fmt_none)
 call s:hi("@function.builtin",      s:fg_function,    s:bg_none,        s:fmt_none)
 call s:hi("@punctuation.special",   s:fg_punctuation, s:bg_none,        s:fmt_none)
 
-" Diff
+"------------------------------------
+" Diff Syntax Highlighting
+"------------------------------------
 call s:hi("DiffAdd",       s:fg_string,      s:bg_none,        s:fmt_none)
 call s:hi("DiffChange",    s:fg_tag,         s:bg_none,        s:fmt_none)
 call s:hi("DiffText",      s:fg_fg,          s:bg_none,        s:fmt_none)
 
+"------------------------------------
 " Messages
+"------------------------------------
 call s:hi("ErrorMsg",      s:fg_fg,          s:bg_error,       s:fmt_stnd)
 call s:hi("WarningMsg",    s:fg_error,       s:bg_none,        s:fmt_none)
 call s:hi("MoreMsg",       s:fg_string,      s:bg_none,        s:fmt_none)
 call s:hi("ModeMsg",       s:fg_string,      s:bg_none,        s:fmt_none)
 
+"------------------------------------
 " Search and Selection
+"------------------------------------
 call s:hi("MatchParen",    s:fg_accent,      s:bg_none,        s:fmt_none)
 call s:hi("Search",        s:fg_bg,          s:bg_constant,    s:fmt_none)
 call s:hi("Visual",        s:fg_none,        s:bg_selection,   s:fmt_none)
 
+"------------------------------------
 " Spelling
+"------------------------------------
 call s:hi("SpellCap",      s:fg_tag,         s:bg_none,        s:fmt_undr)
 call s:hi("SpellLocal",    s:fg_keyword,     s:bg_none,        s:fmt_undr)
 call s:hi("SpellBad",      s:fg_error,       s:bg_none,        s:fmt_undr)
 call s:hi("SpellRare",     s:fg_regexp,      s:bg_none,        s:fmt_undr)
 
+"------------------------------------
 " Popups and Status
+"------------------------------------
 call s:hi("Pmenu",         s:fg_fg,          s:bg_none,        s:fmt_none)
 call s:hi("PmenuSel",      s:fg_fg,          s:bg_none,        s:fmt_revr)
 call s:hi("StatusLine",    s:fg_comment,     s:bg_none,        s:fmt_none)
@@ -144,14 +166,18 @@ call s:hi("WildMenu",      s:fg_bg,          s:bg_markup,      s:fmt_none)
 call s:hi("TabLine",       s:fg_none,        s:bg_none,        s:fmt_revr)
 call s:hi("WhichKeyFloat", s:fg_none,        s:bg_none,        s:fmt_none)
 
+"------------------------------------
 " Misc
+"------------------------------------
 call s:hi("Title",         s:fg_keyword,     s:bg_none,        s:fmt_none)
 call s:hi("NonText",       s:fg_guide,       s:bg_none,        s:fmt_none)
 call s:hi("SpecialKey",    s:fg_selection,   s:bg_none,        s:fmt_none)
 call s:hi("Conceal",       s:fg_guide,       s:bg_none,        s:fmt_none)
 call s:hi("CursorLineConceal", s:fg_guide,   s:bg_line,        s:fmt_none)
 
-" Plugin Specific
+"------------------------------------
+" Plugin-Specific
+"------------------------------------
 " NERDTree
 call s:hi("NERDTreeOpenable",  s:fg_fg_idle,     s:bg_none,        s:fmt_none)
 call s:hi("NERDTreeClosable",  s:fg_accent,      s:bg_none,        s:fmt_none)
@@ -170,7 +196,9 @@ call s:hi("GitGutterChangeDelete", s:fg_function,   s:bg_none,        s:fmt_none
 hi! link diffRemoved Constant
 hi! link diffAdded String
 
+"------------------------------------
 " Terminal Colors
+"------------------------------------
 if has("nvim")
     let g:terminal_color_0  = s:palette.bg
     let g:terminal_color_1  = s:palette.markup
