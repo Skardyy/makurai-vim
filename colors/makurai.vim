@@ -122,6 +122,7 @@ call s:hi("@type",                  s:fg_special,     s:bg_none,        s:fmt_no
 call s:hi("@type.builtin",          s:fg_special,     s:bg_none,        s:fmt_none)
 call s:hi("@function",              s:fg_function,    s:bg_none,        s:fmt_none)
 call s:hi("@function.builtin",      s:fg_function,    s:bg_none,        s:fmt_none)
+call s:hi("@variable",              s:fg_fg,          s:bg_none,        s:fmt_none)
 
 "------------------------------------
 " Diff Syntax Highlighting
