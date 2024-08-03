@@ -206,7 +206,7 @@ call s:hi("LualineLocation",   s:fg_fg_idle,   s:bg_panel,       s:fmt_none)
 
 " nvim-cmp
 call s:hi("CmpItemAbbr",           s:fg_fg,        s:bg_none,        s:fmt_none)
-call s:hi("CmpItemAbbrDeprecated", s:fg_fg_idle,   s:bg_none,        s:fmt_strikethrough)
+call s:hi("CmpItemAbbrDeprecated", s:fg_fg_idle,   s:bg_none,        s:fmt_curl)
 call s:hi("CmpItemAbbrMatch",      s:fg_keyword,   s:bg_none,        s:fmt_bold)
 call s:hi("CmpItemAbbrMatchFuzzy", s:fg_keyword,   s:bg_none,        s:fmt_bold)
 call s:hi("CmpItemMenu",           s:fg_comment,   s:bg_none,        s:fmt_none)
@@ -219,6 +219,46 @@ call s:hi("CmpItemKindMethod",     s:fg_function,  s:bg_none,        s:fmt_none)
 call s:hi("CmpItemKindKeyword",    s:fg_keyword,   s:bg_none,        s:fmt_none)
 call s:hi("CmpItemKindProperty",   s:fg_accent,    s:bg_none,        s:fmt_none)
 call s:hi("CmpItemKindUnit",       s:fg_constant,  s:bg_none,        s:fmt_none)
+
+" Telescope
+call s:hi("TelescopeNormal",       s:fg_fg,        s:bg_panel,       s:fmt_none)
+call s:hi("TelescopeBorder",       s:fg_comment,   s:bg_panel,       s:fmt_none)
+call s:hi("TelescopePromptPrefix", s:fg_accent,    s:bg_panel,       s:fmt_none)
+call s:hi("TelescopeSelection",    s:fg_fg,        s:bg_selection,   s:fmt_none)
+call s:hi("TelescopeSelectionCaret", s:fg_accent,  s:bg_selection,   s:fmt_none)
+call s:hi("TelescopeMultiSelection", s:fg_keyword, s:bg_selection,   s:fmt_none)
+call s:hi("TelescopeMatching",     s:fg_function,  s:bg_none,        s:fmt_bold)
+call s:hi("TelescopePromptTitle",  s:fg_bg,        s:fg_keyword,     s:fmt_bold)
+call s:hi("TelescopeResultsTitle", s:fg_bg,        s:fg_string,      s:fmt_bold)
+call s:hi("TelescopePreviewTitle", s:fg_bg,        s:fg_special,     s:fmt_bold)
+
+" Lazy
+call s:hi("LazyH1",                s:fg_keyword,   s:bg_none,        s:fmt_bold)
+call s:hi("LazyButton",            s:fg_fg,        s:bg_selection,   s:fmt_none)
+call s:hi("LazyButtonActive",      s:fg_fg,        s:bg_accent,      s:fmt_bold)
+call s:hi("LazySpecial",           s:fg_special,   s:bg_none,        s:fmt_none)
+call s:hi("LazyProgressTodo",      s:fg_bg,        s:fg_comment,     s:fmt_none)
+call s:hi("LazyProgressDone",      s:fg_bg,        s:fg_string,      s:fmt_none)
+call s:hi("LazyProp",              s:fg_constant,  s:bg_none,        s:fmt_none)
+call s:hi("LazyValue",             s:fg_string,    s:bg_none,        s:fmt_none)
+call s:hi("LazyNormal",            s:fg_fg,        s:bg_panel,       s:fmt_none)
+call s:hi("LazyReasonPlugin",      s:fg_function,  s:bg_none,        s:fmt_none)
+call s:hi("LazyReasonRuntime",     s:fg_keyword,   s:bg_none,        s:fmt_none)
+call s:hi("LazyReasonEvent",       s:fg_regexp,    s:bg_none,        s:fmt_none)
+
+" Noice
+call s:hi("NoiceCursor",           s:fg_bg,        s:fg_fg,          s:fmt_none)
+call s:hi("NoicePopupBorder",      s:fg_comment,   s:bg_none,        s:fmt_none)
+call s:hi("NoicePopupFooter",      s:fg_comment,   s:bg_panel,       s:fmt_none)
+call s:hi("NoicePopupTitle",       s:fg_keyword,   s:bg_panel,       s:fmt_bold)
+call s:hi("NoiceCmdline",          s:fg_fg,        s:bg_panel,       s:fmt_none)
+call s:hi("NoiceCmdlineIcon",      s:fg_accent,    s:bg_panel,       s:fmt_none)
+call s:hi("NoiceCmdlineIconSearch", s:fg_string,   s:bg_panel,       s:fmt_none)
+call s:hi("NoiceConfirmBorder",    s:fg_comment,   s:bg_none,        s:fmt_none)
+call s:hi("NoiceConfirmTitle",     s:fg_keyword,   s:bg_none,        s:fmt_bold)
+call s:hi("NoiceFormatTitle",      s:fg_bg,        s:fg_keyword,     s:fmt_bold)
+call s:hi("NoiceFormatProgressTodo", s:fg_comment, s:bg_none,        s:fmt_none)
+call s:hi("NoiceFormatProgressDone", s:fg_string,  s:bg_none,        s:fmt_none)
 
 " Diff Syntax Highlighting
 hi! link diffRemoved Constant
