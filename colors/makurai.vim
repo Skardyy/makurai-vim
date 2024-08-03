@@ -190,6 +190,36 @@ call s:hi("GitGutterChange",       s:fg_tag,        s:bg_none,        s:fmt_none
 call s:hi("GitGutterDelete",       s:fg_markup,     s:bg_none,        s:fmt_none)
 call s:hi("GitGutterChangeDelete", s:fg_function,   s:bg_none,        s:fmt_none)
 
+" WhichKey
+call s:hi("WhichKey",          s:fg_function,  s:bg_none,        s:fmt_none)
+call s:hi("WhichKeySeperator", s:fg_string,    s:bg_none,        s:fmt_none)
+call s:hi("WhichKeyGroup",     s:fg_keyword,   s:bg_none,        s:fmt_none)
+call s:hi("WhichKeyDesc",      s:fg_fg,        s:bg_none,        s:fmt_none)
+call s:hi("WhichKeyFloat",     s:fg_fg,        s:bg_panel,       s:fmt_none)
+
+" Lualine
+call s:hi("LualineMode",       s:fg_keyword,   s:bg_panel,       s:fmt_bold)
+call s:hi("LualineBranch",     s:fg_constant,  s:bg_panel,       s:fmt_none)
+call s:hi("LualineFilename",   s:fg_fg,        s:bg_panel,       s:fmt_none)
+call s:hi("LualineProgress",   s:fg_fg_idle,   s:bg_panel,       s:fmt_none)
+call s:hi("LualineLocation",   s:fg_fg_idle,   s:bg_panel,       s:fmt_none)
+
+" nvim-cmp
+call s:hi("CmpItemAbbr",           s:fg_fg,        s:bg_none,        s:fmt_none)
+call s:hi("CmpItemAbbrDeprecated", s:fg_fg_idle,   s:bg_none,        s:fmt_strikethrough)
+call s:hi("CmpItemAbbrMatch",      s:fg_keyword,   s:bg_none,        s:fmt_bold)
+call s:hi("CmpItemAbbrMatchFuzzy", s:fg_keyword,   s:bg_none,        s:fmt_bold)
+call s:hi("CmpItemMenu",           s:fg_comment,   s:bg_none,        s:fmt_none)
+
+call s:hi("CmpItemKindVariable",   s:fg_fg,        s:bg_none,        s:fmt_none)
+call s:hi("CmpItemKindInterface",  s:fg_fg_idle,   s:bg_none,        s:fmt_none)
+call s:hi("CmpItemKindText",       s:fg_string,    s:bg_none,        s:fmt_none)
+call s:hi("CmpItemKindFunction",   s:fg_function,  s:bg_none,        s:fmt_none)
+call s:hi("CmpItemKindMethod",     s:fg_function,  s:bg_none,        s:fmt_none)
+call s:hi("CmpItemKindKeyword",    s:fg_keyword,   s:bg_none,        s:fmt_none)
+call s:hi("CmpItemKindProperty",   s:fg_accent,    s:bg_none,        s:fmt_none)
+call s:hi("CmpItemKindUnit",       s:fg_constant,  s:bg_none,        s:fmt_none)
+
 " Diff Syntax Highlighting
 hi! link diffRemoved Constant
 hi! link diffAdded String
